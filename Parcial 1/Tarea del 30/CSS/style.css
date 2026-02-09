@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    gap: 12px;
+    padding: 15px;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    grid-template-rows:
+    40px
+    40px  
+    40px
+    2fr
+    3fr
+    80px;  /* parte inferior */
+
+
+    grid-template-areas:
+    "a a a b c d"
+    "a a a o o o"
+    "e f f f f f"
+    "g h h h i i"
+    "n j k l i i"
+    "m m m m m m";
+}
+
+
+.grid div{
+    background: rgb(212, 214, 215);
+    text-align: center;
+}
+.a{grid-area:a;}
+.b{grid-area:b;}
+.c{grid-area:c;}
+.d{grid-area:d;}
+.e{grid-area:e;}
+
+.f{
+    grid-area:f;
+    display: flex; /*importante :D*/
+    gap: 3%;
+}
+.g{grid-area:g;}
+.h{grid-area:h;}
+.i{grid-area:i;}
+.j{grid-area:j;}
+.k{grid-area:k;}
+.l{grid-area:l;}
+.m{grid-area:m;}
+.n{grid-area:n;}
+
+.o{ 
+    grid-area:o;
+    display: flex; /*importante :D*/
+    gap: 20%;
+}
+
+.p{grid-area:p;}
+
+.f p{ /*el largo que tiene home*/
+    margin-left: 6%;
+}
+
+.o p{ /* el chiquito que tiene castel*/
+    margin-left: 7.5%;
+}
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 1%;
+}
