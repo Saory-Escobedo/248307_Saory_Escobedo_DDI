@@ -1,0 +1,59 @@
+*{
+        margin: 0;
+        padding: 0;
+}
+
+.contenedor-grid{
+    width: 100vw; /*relativa a la vista del usuario y su dispositivo (osea se adapta al tamaño de la pantalla sola)*/
+    height: 100vh; /*relativa a la vista del usuario y su dispositivo*/
+    border: 2px solid black;
+    display: grid;
+    gap: 20px ;
+    grid-template-areas: "seis seis tres uno" ". dos tres ." "cuatro dos cinco cinco"; /*representa un renglon y ls columnas por medio de las etquetas */
+}
+
+.contenedor-grid div{
+    border: 2px solid black;
+    font-size: 50px;
+}
+
+.elemento-1{
+    grid-area: uno ; /*HACE REFERENCIA A LA POSICION*/
+    background: yellow;
+}
+
+.elemento-2{
+    grid-area: dos ;
+    background: pink;
+}
+
+.elemento-3{
+    grid-area: tres ;
+    background: green; 
+}
+
+.elemento-4{
+    grid-area: cuatro ;
+    background: red;
+}
+.elemento-5{
+    grid-area: cinco ;
+    background: blue;
+}
+.elemento-6{
+    grid-area: seis ;
+    background: orange;
+}
+
+@media (max-width: 400px) {
+    .contenedor-grid{
+        grid-template-areas: 
+        "uno" 
+        "dos" 
+        "tres"
+        "cuatro" 
+        "cinco" 
+        "seis";
+    }
+    
+}
