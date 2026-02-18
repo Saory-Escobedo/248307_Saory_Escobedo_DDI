@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "sketchy";
+    src: url("../Recursos/Tipografias/sketchy/sketchy.ttf") format("truetype");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*menu :b*/
+
+body{
+    width: 100vw;
+    height: 100vw;
+    font-family: Arial, sans-serif;
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    background-color: #91a3f294;
+    margin: auto;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 2vh;
+}
+li{
+    font-size: 4vh;
+    font-family: "sketchy";
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: black;
+}
+
+/* secciones bases con textura e hoja de cuaderno */
+.seccion{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://img.freepik.com/fotos-premium/papel-blanco-arrugado-textura-fondo-hoja-cuaderno-cuadros_84485-3995.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* seccion Parallaxs jajaja son varios :b */
+.parallax{
+    height: 100vh;
+    background-image: url("../Recursos/Imagenes/Portada1.png");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax2{
+    height: 100vh;
+    background-image: url("../Recursos/Imagenes/Personajes1.png");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3{
+    height: 100vh;
+    background-image: url("../Recursos/Imagenes/Personajes2.png");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax4{
+    height: 100vh;
+    background-image: url("../Recursos/Imagenes/Personajes3.png");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*texto que esta arriba del background color y hace la animacion*/
+h1{
+    font-size: 6em;
+    font-family: "sketchy";
+
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+/* subrayado de detrás */
+h1::before{
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: 0em;
+    width: 100%;
+    height: 1.1em;
+
+    background: #F0D070;
+
+    z-index: -1;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    animation: subrayarAnim 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+/*animacion para el hover del inicio para que paresca que se remarca como un marca texto >:D*/
+@keyframes subrayarAnim {
+    to{
+        transform: scaleX(1);
+    }
+}
+
+.subrayar{
+    position: relative;
+    display: inline-block; /*importante para que se ajuste al texto (no borrar >:C)*/
+}
