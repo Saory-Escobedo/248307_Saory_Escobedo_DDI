@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios dinamicos</title>
+</head>
+
+<body>
+    <form action="">
+        <!--Nombre-->
+        <label for="nombre">Nombre: </label>
+        <input type="text" 
+                name="nombre" 
+                placeholder="Igresa el nombre" 
+                id="input_txt_nombre">       
+        <br>
+        <!--Apellido-->
+        <label for="apellido">Apellido: </label>
+        <input type="text" 
+                name="apellido"
+                placeholder="ingresa el Apellido"     
+                id="input_txt_apellido">
+        <br>
+        <!--Correo-->
+        <br>
+        <label for="correo">Correo: </label>
+        <input type="email" 
+                name="correo"
+                placeholder="ingresa el correo"     
+                id="input_correo">
+        <br>
+        <!--Constraseña-->
+        <br>
+        <label for="constraseña">Contraseña: </label>
+        <input type="password" 
+                name="constraseña"
+                placeholder="ingresa tu contraseña"     
+                id="input_contraseña">
+        <br>
+
+
+        <label for="cantidad_correos">Ingrese la cantidad de correos que va a ingresar</label>        
+        <input type="number" name="cantidad_correos" 
+        id="cantidad_correos" onchange="cambiarNumero(event)">
+        <br>
+        <div class="contenedor_correos" id="contenedor_correos">
+
+        </div>
+            
+        <div id="contenedor_usuarios">
+             
+        </div>
+        
+    
+        </div>
+        <br>
+        <button id="boton_guardar">Guardar Datos</button>
+    </form>
+</body>
+<script src="js/script.js"></script>
+
+</html>
