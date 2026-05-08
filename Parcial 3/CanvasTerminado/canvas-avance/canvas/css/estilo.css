@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* 🔥 CONTENEDOR PRINCIPAL */
+.app {
+    display: flex;
+    height: 100dvh; /* mejor que 100vh en móvil */
+}
+
+/* 🔥 TOOLBAR */
+.toolbar {
+    width: 280px;
+    background: #2b2b2b;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-right: 2px solid #444;
+    overflow-y: auto;
+}
+
+.toolbar h2 {
+    text-align: center;
+    font-size: 18px;
+}
+
+.grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* 🔥 BOTONES */
+button {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background: #3a3a3a;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+button:hover {
+    background: #575757;
+}
+
+button.active {
+    background: #0078ff;
+}
+
+/* INPUTS */
+input[type="color"],
+input[type="range"],
+input[type="file"] {
+    width: 100%;
+}
+
+/* 🔥 CANVAS */
+.canvas-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+canvas {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 📱 TABLET */
+@media (max-width: 1024px) {
+    .toolbar {
+        width: 220px;
+    }
+}
+
+/* 📱 TELÉFONO */
+@media (max-width: 768px) {
+
+    .app {
+        flex-direction: column;
+    }
+
+    /* toolbar horizontal tipo app */
+    .toolbar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .toolbar h2 {
+        display: none;
+    }
+
+    .grupo {
+        flex-direction: row;
+        min-width: max-content;
+        gap: 6px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    /* canvas ocupa el resto */
+    .canvas-container {
+        flex: 1;
+        height: calc(100dvh - 120px);
+    }
+}
+
+/* 📱 TELÉFONO PEQUEÑO */
+@media (max-width: 480px) {
+
+    button {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .toolbar {
+        gap: 6px;
+    }
+}

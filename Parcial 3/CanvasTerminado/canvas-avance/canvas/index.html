@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Proyecto</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+<!--contenedor principal de toda la app-->
+<div class="app">
+
+<!--barra lateral con herramientas-->
+<aside class="toolbar">
+
+<h2>Herramientas</h2>
+
+<!--botones herramientas-->
+<div class="grupo">
+<button id="btn_pincel">Pincel</button>
+<button id="btn_linea">Linea</button>
+<button id="btn_cuadrado">Cuadro</button>
+<button id="btn_circulo">Circulo</button>
+<button id="btn_estrella">Estrella</button>
+<button id="btn_sticker">Sticker</button>
+<button id="btn_borrador">Borrador</button>
+</div>
+<div class="grupo">
+
+<!--selector del color de linea-->
+<label>Color línea</label>
+<input type="color" id="color_linea">
+
+<!--selector del color de relleno-->
+<label>Color relleno</label>
+<input type="color" id="color_relleno">
+
+<!--control para cambiar el grosor-->
+<label>Grosor</label>
+<input type="range" id="grosor" min="1" max="50">
+
+</div>
+
+<!--botones de filtros-->
+<div class="grupo">
+<button id="f_bn">BN</button>
+<button id="f_sepia">Sepia</button>
+<button id="f_negativo">Negativo</button>
+<button id="f_rojo">Rojo</button>
+<button id="f_verde">Verde</button>
+<button id="f_azul">Azul</button>
+<button id="f_reset">Normal</button>
+</div>
+
+<!--subir imagenes/stickers-->
+<div class="grupo">
+<input type="file" id="input_file">
+</div>
+
+<!--canvas-->
+<div class="grupo">
+<button id="btn_limpiar">Limpiar</button>
+<button id="btn_guardar">Guardar</button>
+<button id="btn_undo">Undo</button>
+<button id="btn_redo">Redo</button>
+</div>
+
+</aside>
+
+<!--area donde se dibuja-->
+<main class="canvas-container">
+<canvas id="lienzo"></canvas>
+</main>
+
+</div>
+
+<script type="module" src="scripts/canvas.js"></script>
+</body>
+</html>
